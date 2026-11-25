@@ -1,0 +1,26 @@
+Проверка гонки и мьютекса
+
+Expected result: 600000
+Without mutex, run 1: 544266, lost: 55734
+Without mutex, run 2: 538976, lost: 61024
+Without mutex, run 3: 600000, lost: 0
+With mutex, run 1: 600000, lost: 0
+With mutex, run 2: 600000, lost: 0
+With mutex, run 3: 600000, lost: 0
+
+Проверка сервера с тремя клиентами
+
+Client 1: sent and received 'Client 1: hello!'
+Client 2: sent and received 'Client 2: hello!'
+Client 3: sent and received 'Client 3: hello!'
+Three concurrent clients: PASS
+Server shutdown and descriptors: PASS
+Server output:
+Server listening on 127.0.0.1:9092
+Client connected; active=1
+Client connected; active=2
+Client connected; active=3
+Client disconnected; active=2
+Client disconnected; active=1
+Client disconnected; active=0
+Shutdown: active=0, total=3, finished=3, peak=3
